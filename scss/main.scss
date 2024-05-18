@@ -6,11 +6,21 @@
   @return map-get($font-weights, $weight-name);
 }
 
-@mixin flexCenter($direction){
+// basic example
+@mixin flexCenter($direction: column){
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: $direction;
+  gap: 3rem;
+}
+
+// light and dark theme in using mixin
+@mixin theme($light-theme: true){
+  @if $light-theme {
+    background: lighten($primary-color, 100%);
+    color: darken($text-color, 100%);
+  }
 }
 
 body {
@@ -28,4 +38,8 @@ body {
       color: pink;
     }
   }
+}
+
+.light{
+  @include theme($light-theme: false);
 }
