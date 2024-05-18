@@ -6,12 +6,20 @@
   @return map-get($font-weights, $weight-name);
 }
 
+@mixin flexCenter($direction){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+}
+
 body {
   background-color: $primary-color;
   color: $text-color;
 }
 
 .main{
+  @include flexCenter(row);
   width: 80%;
   margin: 0 auto;
   #{&}__paragragh{
