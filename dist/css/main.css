@@ -18,9 +18,17 @@ body {
   width: 80%;
   margin: 0 auto;
 }
-.main .main__paragragh {
+.main .main__paragraph1, .main .main__paragraph2 {
   font-weight: 400;
 }
-.main .main__paragragh:hover {
+.main .main__paragraph1:hover, .main .main__paragraph2:hover {
   color: pink;
+}
+.main .main__paragraph2:hover {
+  color: blue;
+}
+@media (max-width: 550px) {
+  .main {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=main.css.map */
